@@ -1,0 +1,134 @@
+\documentclass[11pt]{article}
+\usepackage{CJK}
+\usepackage{amssymb}
+\usepackage{latexsym}
+
+\begin{document}
+\begin{CJK}{GBK}{song}
+
+\title{Homework 03 }
+\author{ WISE ¸ßÇì»Ô 27720161153011 }
+
+\maketitle
+
+\begin{itemize}
+\item 3.15 ANS:
+
+From the PDF of X, we know that X has a continuous distribution $F_X(X)$ which is strictly monotonically increasing (when $1< x <3$).
+
+So we can forms a 1-1 correspondence between $\mathbb{R}$ and interval $(0,1)$. Inverse function $F_X^{-1}(\cdot)$ exists and
+
+\[ F_X(F_X^{-1}(y)) = y \]
+
+for any $y \in \mathbb{R}$.
+
+For $0<y<1$,
+
+\begin{eqnarray*}
+F_Y(y)=&P(F_X(X) \leq y)\\
+=& P(X \leq F_X^{-1}(y))\\
+=& F_X(F_X^{-1}(y))\mbox{}\\
+=& y
+\end{eqnarray*}
+
+\[
+f_Y(y)=\left\{
+    \begin{array}{ll}
+    1 &\mbox{$0<y<1$,}\\
+    0 &\mbox{otherwise.}
+    \end{array}
+    \right.
+\]
+
+So Y follows Uniform $(0,1)$ distribution.
+
+Calculate the CDF of X, we have
+
+\[
+F_X(X)=\left\{
+    \begin{array}{ll}
+    0 &\mbox{$x \le 1,$}\\
+    \frac{(X-1)^2}{4}&\mbox{$1<x<3$,}\\
+    1 &\mbox{$x \geq 3$.}
+    \end{array}
+    \right.
+\]
+
+so $Y=u(X)=F_X(X)$ follows Uniform$(0,1)$ distribution.
+
+
+
+\item 3.23
+
+The CDF of Y is
+\begin{eqnarray*}
+F_Y(y)=&P(Y \leq y)\\
+=& P(X \leq F_X^{-1}(y))\\
+=& F_X(F_X^{-1}(y))\mbox{}\\
+=& y
+\end{eqnarray*}
+
+
+The CDF of Y is:
+
+\begin{eqnarray*}
+F_Y(y)=&P(Y \le y)\\
+=&P(Y \le y | a < X) + P(Y \le y| a \le X \le b) + P(Y \le y | X < b)
+\end{eqnarray*}
+
+Since $\{a < X, a \le X \le b, X < b\}$ is a partition of S.
+
+From $Y = X \cdot \mathbf{1} (a \le X \le b) $, we have
+
+\begin{eqnarray*}
+F_Y(y)=&P(Y \le y)\\
+=&P(Y \le y | a < X) + P(Y \le y| a \le X \le b) + P(Y \le y | X < b)\\
+=&P(X \le y| a \le X \le b) + P(X \le y | X < b) + P(X \le y | a < X)\\
+=&P(X \le y| a \le X \le b) + P(X \le y | X < b) + P(X \le y | a < X)\\
+=&\frac{P((X \le y) \cap (a \le X \le b)  )}{P((a \le X \le b))} + \frac{P((0 \le y) \cap (a < X)  )}{P(a < X)} + \frac{P((0 \le y) \cap (X < b))  }{P(X < b)}\\
+=&\frac{P((X \le y) \cap (a \le X \le b)  )}{P((a \le X \le b))}\\
+\end{eqnarray*}
+
+Since $P((0 \le y) \cap (X < b)) = P((0 \le y) \cap (a < X))=0$.
+
+So,
+\begin{eqnarray*}
+F_Y(y)=&\frac{P((X \le y) \cap (a \le X \le b)  )}{P(a \le X \le b)}& \\
+=&\frac{F_X(y)}{F_X(b) - F_X(a)} & (a \le y \le b)
+\end{eqnarray*}
+
+we have
+
+\begin{eqnarray*}
+f_Y(y)=&F_Y'(y)& \\
+=&\frac{f_X(y)}{F_X(b) - F_X(a)} & (a \le y \le b)
+\end{eqnarray*}
+
+\item 3.25 ANS:
+
+\item 3.28 ANS:
+
+
+
+\item 3.30 ANS:
+
+a.
+
+\[
+\int_0^m 3x^2dx = m^3 = \frac{1}{2}
+\]
+
+so, $m = \frac{1}{2}^{1/3} = 0.794$
+
+b.
+
+The function is symmetric about zero, therefore m = 0 as long as the integral is finite.
+
+\[ 
+\frac{1}{\pi} \int_{-\infty}^{\infty} \frac{1}{1+x^2}dx = \frac{1}{\pi}tan^{-1}\arrowvert_{-\infty}^{\infty}=\frac{1}{\pi}(\frac{\pi}{2}+\frac{\pi}{2})=1
+\]
+
+\end{itemize} 
+
+\end{CJK}
+\end{document}
